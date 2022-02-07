@@ -1,0 +1,24 @@
+.aside-button {
+  background-color: $fc-button1;
+  color: $fc-background;
+  font-family: $ff-primary;
+  width: 100%;
+  font-size: $large;
+  border: none;
+  font-weight: $fw-bold;
+  margin-top: 5px;
+}
+
+
+@include medium-view {
+  .aside-button {
+     margin-top: 10px;
+     font-size: $m-large;
+  }
+}
+
+@include large-view {
+  .aside-button {
+    font-size: $xxxx-large;
+  }
+}

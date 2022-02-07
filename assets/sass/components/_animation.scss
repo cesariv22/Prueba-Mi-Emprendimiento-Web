@@ -1,0 +1,58 @@
+.svg-cell {
+    margin: 20px 50px;
+}
+
+.box-chevrons {
+    transform:translate(30%);
+    animation-name: mover-right;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    -webkit-transform:translate(30%);
+    -moz-transform:translate(30%);
+    -ms-transform:translate(30%);
+    -o-transform:translate(30%);
+}
+@keyframes mover-right {
+    100% { transform:unset ; -webkit-transform:unset ; -moz-transform:unset ; -ms-transform:unset ; -o-transform:unset ; }
+}
+
+.gear {
+    animation-name: gear-spin;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-box: fill-box;
+    transform-origin: 53% 53%;
+}
+
+@keyframes gear-spin {
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+    }
+}
+@include medium-view {
+    .svg-cell {
+        display: flex;
+        justify-content: center;
+        
+        &__box {
+        width: 300px;
+        height: 300px;
+        }
+    }
+}
+
+@include large-view {
+    .svg-cell {
+        &__box {
+            width: 500px;
+            height: 500px;
+        }
+    }
+}

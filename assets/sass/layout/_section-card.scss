@@ -1,0 +1,126 @@
+.cards {
+    border: 2px solid $fc-contrast;
+
+    &__one {
+        margin: 30px 20px 10px 20px;
+        border: 1px dotted ;
+    }
+}
+
+.card-section {
+    margin: 10px;
+
+    &__image {
+        background-image: url(../img/html-y-cssb-.jpg);
+        background-repeat: no-repeat;
+        background-size: contain;
+        height: 150px;
+    }
+
+    &__text--paragraph1 {
+        font-family: $ff-primary;
+        text-align: justify;
+        line-height: 30px;
+        margin-top: 10px;
+    }
+
+    &__text--paragraph2 {
+        margin-top: 10px;
+        font-family: $ff-secondary;
+        font-weight: $fw-bold;
+        font-size: $large;
+    }
+}
+
+.icons-section {
+    margin-top: 10px;
+
+    &__icon {
+        padding-right: 10px;
+        text-decoration: none;
+        color: $fc-contrast;
+        font-family: $ff-tertiary;
+        font-size: $medium;
+        letter-spacing: 5px;
+    }
+}
+
+//CARD TWO
+.cards__two {
+    margin: 0 20px 10px 20px;
+    border: 1px dotted;
+}
+
+.card-section {
+    &__image2 {
+          background-image: url(../img/sass.png);
+          background-repeat: no-repeat;
+          background-size: contain;
+          height: 150px;
+    }
+}
+
+@include medium-view {
+    .card-section {
+        &__image {
+            background-size: cover;
+            height: 260px;
+            background-position: center;
+        }
+        &__text--title {
+            font-size: $x-large;
+        }
+        &__text--paragraph1 {
+            font-size: $large;
+        }
+        &__text--paragraph2 {
+            font-size: $m-large;
+        }
+        &__image2 {
+            background-size: cover;
+            height: 260px;
+            background-position: center;
+        }
+    }   
+
+    .icons-section {
+        &__icon {
+            font-size: $m-large;
+        }
+    }
+}
+
+@include large-view {
+    .cards {
+        margin-right: 15px;
+    }
+    .card-section {
+        &__image {
+            height: 600px;
+        }
+        &__text--title {
+            font-size: $xxxxx-large;
+            margin-top: 20px;
+        }
+
+        &__text--paragraph1 {
+            font-size: $xxxx-large;
+            margin-top: 20px;
+            line-height: 60px;
+        }
+
+        &__text--paragraph2 {
+            font-size: $xxxx-large;
+        }
+
+        &__image2 {
+            height: 600px;
+        }
+    }
+
+    .icons-section {
+        &__icon {
+            font-size: $xxxx-large;
+        }
+    }
+}

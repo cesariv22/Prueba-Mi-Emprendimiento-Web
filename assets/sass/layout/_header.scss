@@ -1,0 +1,27 @@
+.header-section {
+    &__image {
+        background-image: url(../img/desarrolloweb2021t.svg);
+        background-repeat: no-repeat;
+        height: 220px;
+        background-size: 100% 100%;
+    }
+}
+
+@include medium-view {
+    .header-section {
+        &__image {
+            height: 300px;
+        }
+    }
+}
+
+@include large-view {
+    .header-section {
+        &__image {
+            background-size: contain;
+            height: 700px;
+            background-position: center;
+        }
+    }
+}
+

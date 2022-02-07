@@ -1,0 +1,105 @@
+.footer-section{
+    background-color: $fc-contrast;
+    color:$fc-background;
+    font-family:$ff-primary;
+    text-align: center;
+    padding: 40px 40px 5px;
+    font-size: $x-medium;
+    
+    &__icon span {
+        font-family: $ff-primary;
+        line-height: 30px;
+    }
+
+    &__paragraph1 {
+        margin-top: 15px;
+    }
+
+    &__paragraph2 {
+        margin-top: 10px;
+    }
+
+    &__input {
+        margin-top: 15px;
+        font-family: $ff-primary;
+        font-size: $x-medium;
+        border: 1px solid $fc-button1;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+
+    &__input:focus {
+        background-color: $fc-primary;
+    }
+
+    &__button  button {
+        margin-top: 10px;
+        font-size: $x-medium;
+        font-family: $ff-primary;
+        background-color: $fc-primary;
+        color: $fc-button1;
+        border: 2px solid $fc-background;
+        border-right-color: $fc-button1;
+        border-bottom-color: $fc-button1;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+    }
+    
+    &__button button:hover {
+        background-color: $fc-background;
+    }
+}
+
+@include medium-view {
+    .footer-section {
+        font-size: $m-large;
+
+        &__input {
+            font-size: $m-large;
+        }
+        
+        &__button button {
+            font-size: $m-large;
+        }
+    }
+}
+
+@include large-view {
+    .footer-section {
+        padding: 40px 200px;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        font-size: $x-large;
+        
+        &__icon {
+            padding-right: 700px;
+        }
+
+        &__paragraph1 {
+            margin-top: 0;
+            padding-right: 100px;
+        }
+        
+        &__paragraph2 {
+            margin: 0;
+            padding-right: 100px;
+        }
+
+        &__input {
+            margin-top:0;
+            justify-self: end;
+        }
+
+        &__button button {
+            margin-top: 0;
+            font-size: $x-large;
+        }
+    }
+}

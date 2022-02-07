@@ -1,0 +1,113 @@
+.nav {
+    background-color: $fc-contrast;
+}
+
+.nav-menu {
+    &__logo--image {
+        background-image: url(../img/logo.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        height: 40px;
+        margin: 10px 0;
+    }
+}
+
+.dropdown {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+
+    &-input {
+        display: none;
+
+        &:checked~.dropdown-list {
+            max-height: 100%;
+        }
+    }
+
+    &-icon i {
+        padding: 1rem;
+        display: block;
+        font-size: $x-large;
+        color: $fc-background;
+    }
+
+    &-icon i:hover {
+        color: $fc-hover;
+    }
+}
+
+.dropdown-list {
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    text-align: left;
+
+    &__ul {
+        margin-right: 30px;
+    }
+
+    &__ul--li a {
+        display: block;
+        text-decoration: none;
+        color: $fc-background;
+        font-family: $ff-primary;
+        font-weight: $fw-bold;
+    }
+}
+
+@include medium-view {
+    .nav-menu {
+        &__logo--image {
+            background-position: center;
+            width: 100%;
+            height: 80px;
+            margin: 20px 0;
+        }
+    }
+
+    .dropdown {
+        &-icon {
+            display: none;
+        }
+    }
+
+    .dropdown-icon i {
+        font-size: $xxxx-large;
+    }
+
+    .dropdown-list {
+        &__ul {
+            display: flex;
+            list-style: none;
+            margin-right: 50px;
+        }
+        
+        max-height: 100%;
+        &__ul--li {
+            font-size: $large;
+            padding-right: 15px;
+        }
+    }
+}
+
+@include large-view {
+    .nav-menu {
+        &__logo--image {
+            background-position: left;
+            width: 100%;
+            height: 100px;
+            margin: 20px 20px;
+        }
+    }
+
+    .dropdown-list {
+        &__ul--li {
+            font-size: $xx-large;
+            padding-right: 40px;
+        }
+    }
+}
